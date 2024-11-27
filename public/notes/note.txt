@@ -1,0 +1,35 @@
+ // Get items from FIREBASE
+  const fetchItems = async () => {
+    const querySnapshot = await getDocs(collection(db, "items"));
+    const itemsList = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    setItems(itemsList)
+  };
+
+
+  // Add data to FIREBASE 
+  const addItem = async () => {
+    await addDoc(collection(db , "items"),{
+      name : 'John',
+      price : 300,
+      availability : true
+    })
+ 
+    fetchItems()
+  }
+
+
+
+
+  // Delete items from FIREBASE
+  const deleteItem  = async id => {
+    const itemRef = doc(db , 'items' , id)
+    await deleteDoc(itemRef)
+    fetchItems()
+  }
+
+  useEffect(()=>{
+    fetchItems() 
+  },[])

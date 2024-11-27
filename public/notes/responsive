@@ -1,0 +1,5 @@
+sm	640px ve üstü	sm:bg-red-500
+md	768px ve üstü	md:text-xl
+lg	1024px ve üstü	lg:p-4
+xl	1280px ve üstü	xl:grid-cols-4
+2xl	1536px ve üstü	2xl:container
