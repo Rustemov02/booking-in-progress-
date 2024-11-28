@@ -6,10 +6,11 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import MenuIcon from '@mui/icons-material/Menu';
 import BookingForm from "../../BookingForm/BookingForm";
 
+
 function Header() {
   return (
     <div
-      className="h-auto relative pb-14"
+      className="h-auto sm:h-screen relative pb-14"
       style={{
         backgroundImage: "url('/images/homeImg.jpg')",
         backgroundSize: "cover",
