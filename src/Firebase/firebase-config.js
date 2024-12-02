@@ -1,17 +1,19 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBdOx01aL-a8Uv7WUC7eeAa3n7cLoi0fSg",
-    authDomain: "testing-4bb4f.firebaseapp.com",
-    projectId: "testing-4bb4f",
-    storageBucket: "testing-4bb4f.firebasestorage.app",
-    messagingSenderId: "49115028096",
-    appId: "1:49115028096:web:6365d3fe8b48964a3ce465",
-    measurementId: "G-J3EDY7ZN7H"
-  };
+  apiKey: "AIzaSyChvhEmejw0_Hp5FV8jAhSd5LPajo_RoBg",
+  authDomain: "booking-c115f.firebaseapp.com",
+  projectId: "booking-c115f",
+  storageBucket: "booking-c115f.firebasestorage.app",
+  messagingSenderId: "263440776632",
+  appId: "1:263440776632:web:c02298486de329ddf5e34d",
+  measurementId: "G-5F4KWQL7GT",
+};
 
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
-  const app = initializeApp(firebaseConfig)
-  
-  export const db = getFirestore(app)
+export { app, analytics, db };
